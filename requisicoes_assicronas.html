@@ -8,6 +8,7 @@
 	   
 	   <script>
             function requisitarPagina(url){
+				document.getElementById('conteudo').innerHTML='';//limpar nó filhos da div para evitar de aparecer juntamente com a mensagem 
 				if(!(document.getElementById('loading'))){
 					let imgLoading= document.createElement('img')
 					imgLoading.id='loading'
@@ -18,9 +19,14 @@
                 let ajax= new XMLHttpRequest()
                 ajax.open('GET',url);
 				ajax.onreadystatechange=()=>{ //testa se houve mudança 
-					if(ajax.readyState==4){ //se a mudança aconteceu e foi o estado de n 4 executa o console.log
-						console.log('requisição finalizada');
-						document.getElementById('loading').remove();
+					if(ajax.readyState==4 && ajax.status==200){ //se a mudança aconteceu e foi o estado de n 4 executa o console.log
+						document.getElementById('conteudo').innerHTML='Requisição finalizada com sucesso o status da requisição é 200'
+						//document.getElementById('loading').remove();
+					}
+
+					if(ajax.readyState==4 && ajax.status==400){ //se a mudança aconteceu e foi o estado de n 4 executa o console.log
+						console.log('requisição finalizada porém o arquivo procurado não foi encontrado o status é: ', ajax.status);
+						//document.getElementById('loading').remove();
 					
 					}
 
