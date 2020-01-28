@@ -3,10 +3,6 @@ Repositorio destinado a exemplos de utilização do Ajax
 # Ajax
 > Acronomo de Asynchronous Javascript And XML.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 Ajax é um conjunto de técnicas de desenvolvimento voltado para a web que permite que aplicações trabalhem de modo assíncrono, 
 processando qualquer requisição ao servidor em segundo plano.
 
