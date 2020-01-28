@@ -18,7 +18,7 @@ A few motivating and useful examples of how your product can be used. Spice this
 
 
 
-## Como fazerrequisições AJAX
+## Como fazer Requisições AJAX
 
 No JavaScript podemos usar o Ojeto ```XMLHttpRequst``` para fazer as requisições segue exemplo:
 
@@ -30,8 +30,8 @@ instancia-se um objeto e depois chama-se os métodos referentes a abertura da co
 
 Gileno Cordeiro Duarte – gileno.cr.duarte@gmail.com
 ## Exemplos feitos a partir da instrução do Curso de desenvolvimento Web completo Ministrado na plataforma Udemy.
+## Links para mais informações:
+(<https://www.devmedia.com.br/ajax-tutorial/24797>)
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
 
