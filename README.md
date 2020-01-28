@@ -5,18 +5,13 @@ Repositorio destinado a exemplos de utilização do Ajax
 Ajax é um conjunto de técnicas de desenvolvimento voltado para a web que permite que aplicações trabalhem de modo assíncrono, 
 processando qualquer requisição ao servidor em segundo plano.
 
-![](header.png)
+![](https://miro.medium.com/max/2000/1*v3b022s2UAyhVAFLUtzhJg.png)
 
 ## Exemplo De utilização de AJAX
 
 Imagine a ferramenta de sugestões de pesquisa do Google. Ela ajuda a completar as palavras que você digita em tempo real enquanto a página permanece estática.
 
 No início dos anos 90, quando a internet ainda não era tão avançada, a mesma funcionalidade iria exigir que a página fosse recarregada sempre que uma nova sugestão de pesquisa aparecesse na tela. O AJAX permite a troca de informações simultânea sem interferir com outras funções. leia mais nesse link:  (<https://www.hostinger.com.br/tutoriais/o-que-e-ajax/>)
-## Usage example
-
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-
 
 ## Como fazer Requisições AJAX
 
