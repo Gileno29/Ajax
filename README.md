@@ -1,6 +1,5 @@
 # Ajax
 Repositorio destinado a exemplos de utilização do Ajax
-# Ajax
 > Acronomo de Asynchronous Javascript And XML.
 
 Ajax é um conjunto de técnicas de desenvolvimento voltado para a web que permite que aplicações trabalhem de modo assíncrono, 
