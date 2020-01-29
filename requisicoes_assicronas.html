@@ -20,7 +20,7 @@
                 ajax.open('GET',url);
 				ajax.onreadystatechange=()=>{ //testa se houve mudança 
 					if(ajax.readyState==4 && ajax.status==200){ //se a mudança aconteceu e foi o estado de n 4 executa o console.log
-						document.getElementById('conteudo').innerHTML='Requisição finalizada com sucesso o status da requisição é 200'
+						document.getElementById('conteudo').innerHTML= ajax.responseText; // retornar o valor do atributo response text que tem o conteudo da página
 						//document.getElementById('loading').remove();
 					}
 
