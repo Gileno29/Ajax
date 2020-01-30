@@ -19,8 +19,84 @@
 						let domFilmes=parser.parseFromString(XMLFilmes, 'text/xml');
 						jsonFilmes= xmlToJson(domFilmes);
 
+						for(let i in jsonFilmes['filmes']['filme']){//percorrendo o array dos filmes
+							console.log(jsonFilmes);//imprimindo os valores do array de filmes
 
-						console.log(jsonFilmes);
+							let item= jsonFilmes['filmes']['filme'][i];
+
+							let row= document.createElement('div');
+							row.className='row ';
+							
+							let col= document.createElement('div');
+							col.className='col-md-5';
+
+							let card= document.createElement('div');
+							card.className='card';
+
+							let cardBody= document.createElement('div');
+							cardBody.className='card-body';
+
+							let p1 = document.createElement('p');
+							p1.innerHTML="<strong>Título:</strong> "+item['titulo']['#text'];
+
+							let p2 = document.createElement('p');
+							p2.innerHTML="<strong>Resumo:</strong> "+item['resumo']['#text'];
+
+							let genero= '';
+							for(g in item.genero){
+								if(genero){
+									genero+= ', '
+								}
+								genero+=item.genero[g]["#text"];
+								// console.log(genero);
+							}
+
+							let p3 = document.createElement('p');
+							p3.innerHTML="<strong>Gênero:</strong> "+genero;
+							let p4 = document.createElement('p');
+
+							let elenco='';
+							for(let e in item.elenco.ator){
+								if(elenco){
+									elenco+=', ';
+								}
+								elenco+=item.elenco.ator[e]["#text"];
+							}
+							p4.innerHTML="<strong>Elenco:</strong>"+elenco;
+
+							let p5 = document.createElement('p');
+							p5.innerHTML="<strong>Data De Lançamento:</strong>"+item['dataLancamento']['#text']+ " Pais: "+item['dataLancamento']['@attributes']['pais'];
+
+							//inserindo elementos uns dentro dos outros
+							let hr= document.createElement('hr');
+							row.appendChild(col);
+							col.appendChild(card);
+							card.appendChild(cardBody)
+							cardBody.appendChild(p1);
+							cardBody.appendChild(p2);
+							cardBody.appendChild(p3);
+							cardBody.appendChild(p4);
+							cardBody.appendChild(p5);
+							
+							
+
+							let contaier= document.getElementById('corpo');
+						
+							contaier.appendChild(row);
+							row.className='mb-2';
+
+
+
+						}
+						/*<div class="row">
+							 <div class="col">
+									<p><strong>Título:</strong> Título do Fime </p>
+									<p><strong>Resumo:</strong> Título do Fime </p>
+									<p><strong>Gênero:</strong> Título do Fime </p>
+									<p><strong>Elenco:</strong> Título do Fime </p>
+									<p><strong>Data De Lançamento:</strong> Título do Fime </p>
+								</div>
+							</div> */
 					}
 
 					if(xmlHttp.readyState == 4 && xmlHttp.status == 404) {
@@ -42,12 +118,16 @@
 			</div>
 		</nav>
 
-		<div class="container">
+		<div class="container" id="corpo">
 			<div class="row">
-				<div class="col">
+				<div class="col mb-5">
+				
 					<button type="button" class="btn btn-success" onclick="getFilmes()">Listar filmes</button>
 				</div>
 			</div>
+				
+			</div>
+			
 		</div>
 	</body>
 </html>
